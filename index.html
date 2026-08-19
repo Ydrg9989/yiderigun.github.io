@@ -396,7 +396,7 @@
     <picture><source srcset="assets/sea.webp" type="image/webp" /><img src="assets/sea.jpg" alt="Open sea under a clear sky, a motorboat leaving a long wake near the horizon" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 42%; animation: seaDrift 70s ease-in-out infinite alternate;" fetchpriority="high" /></picture>
     <div style="position: absolute; inset: 0; background: linear-gradient(rgba(10,40,70,0.28) 0%, rgba(10,40,70,0.06) 34%, rgba(8,32,58,0.42) 100%);"></div>
 
-    <div style="position: relative; max-width: 940px; margin: 0 auto; padding: 0 40px; height: 100%; display: flex; flex-direction: column; justify-content: space-between; box-sizing: border-box;">
+    <div style="position: relative; max-width: 700px; margin: 0 auto; padding: 0 40px; height: 100%; display: flex; flex-direction: column; justify-content: space-between; box-sizing: border-box;">
       <nav style="display: flex; gap: 28px; align-items: center; padding-top: 26px; font-size: 14.5px; letter-spacing: 0.04em; text-transform: uppercase;">
         <a href="#about" style="color: #eef4f8; text-decoration: none;" style-hover="color:#ffffff">About</a>
         <a href="#publications" style="color: #eef4f8; text-decoration: none;" style-hover="color:#ffffff">Publications</a>
@@ -410,11 +410,11 @@
     </div>
   </header>
 
-  <main style="max-width: 940px; margin: 0 auto; padding: 0 40px 120px; box-sizing: border-box;">
+  <main style="max-width: 700px; margin: 0 auto; padding: 0 40px 120px; box-sizing: border-box;">
 
     <section id="about" style="padding: 78px 0 0; animation: rise 0.7s ease both;">
       <h2 style="font-family: Spectral, Georgia, serif; font-weight: 500; font-size: 30px; margin: 0 0 22px; color: #14456f;">Hallo there! I'm Yiderigun Borjigin.</h2>
-      <div style="display: grid; gap: 18px; max-width: 66ch;">
+      <div style="display: grid; gap: 18px;;">
         <p style="margin: 0; font-size: 18px; line-height: 1.75; text-wrap: pretty;">I am a doctoral researcher in AI safety at Saarland University, supervised by Prof. Dr. Roland Aydin, working on behavioral evaluation of LLMs, chain-of-thought faithfulness, and mechanistic interpretability.</p>
         <p style="margin: 0; text-wrap: pretty; color: #33404d;">My research asks when a model's output is driven by evidence and when it is driven by something else in its context — a number planted in a retrieved document, a confidently phrased wrong reasoning trace, an artifact of how data was serialized into text. I build controlled benchmarks that isolate one causal factor, run them across open-weight and frontier models, and trace the behavior back to internal state via residual-stream patching. The finding that recurs is that high task accuracy does not imply robustness.</p>
       </div>
@@ -438,8 +438,8 @@
           <a href="#" style="font-family: Spectral, Georgia, serif; font-size: 20px; line-height: 1.35;">AnchorBench: A Multi-Pathway Benchmark for the Anchoring Effect in LLMs</a>
           <p style="margin: 0; font-size: 15.5px; color: #3f4c59;"><strong style="color: #1c2530;">Yiderigun Borjigin</strong>, Alexander Hermann, Christian J. Cyron, Roland Aydin</p>
           <p style="margin: 0; font-size: 15px; color: #6b7a88;"><em>Conference on Language Modeling (COLM), main conference</em> · 2026</p>
-          <p style="margin: 4px 0 0; max-width: 68ch; color: #3f4c59; font-size: 15.5px; text-wrap: pretty;">A benchmark isolating how a numeric anchor's delivery pathway — prompt, conversation history, few-shot demonstrations, RAG documents, tool outputs — and its framing govern LLM judgment. 14 models × 9,000 condition-controlled prompts, with a Bayesian rational-updating ceiling separating justified evidence integration from bias.</p>
-          <div style="display: flex; gap: 16px; font-size: 14.5px; margin-top: 2px;">
+          <p style="margin: 4px 0 0; color: #3f4c59; font-size: 15.5px; text-wrap: pretty;">A benchmark isolating how a numeric anchor's delivery pathway — prompt, conversation history, few-shot demonstrations, RAG documents, tool outputs — and its framing govern LLM judgment. 14 models × 9,000 condition-controlled prompts, with a Bayesian rational-updating ceiling separating justified evidence integration from bias.</p>
+          <div style="display: flex; flex-wrap: wrap; gap: 16px; font-size: 14.5px; margin-top: 2px;">
             <a href="#">arXiv</a>
             <a href="https://github.com/Ydrg9989/AnchorBench">code</a>
             <a href="https://huggingface.co/datasets/Yiderigun/AnchorBench">dataset</a>
@@ -450,8 +450,8 @@
           <a href="#" style="font-family: Spectral, Georgia, serif; font-size: 20px; line-height: 1.35;">From RawTokens to PhysSummary: Probing Text Interfaces for Inverse 1D PDE Parameter Estimation</a>
           <p style="margin: 0; font-size: 15.5px; color: #3f4c59;"><strong style="color: #1c2530;">Yiderigun Borjigin</strong><sup>†</sup>, Arman Shojaei, Christian J. Cyron, Roland Aydin</p>
           <p style="margin: 0; font-size: 15px; color: #6b7a88;"><em>ICLR 2026 Workshop on AI and Partial Differential Equations</em> · Poster · 2026</p>
-          <p style="margin: 4px 0 0; max-width: 68ch; color: #3f4c59; font-size: 15.5px; text-wrap: pretty;">Shows the text interface between numerical data and an LLM is reliability-critical, with a failure-mode taxonomy — prompt-visible constant copying, fine-tuning collapse on compressed features, non-monotonic shot scaling — invisible to accuracy metrics alone.</p>
-          <div style="display: flex; gap: 16px; font-size: 14.5px; margin-top: 2px;">
+          <p style="margin: 4px 0 0; color: #3f4c59; font-size: 15.5px; text-wrap: pretty;">Shows the text interface between numerical data and an LLM is reliability-critical, with a failure-mode taxonomy — prompt-visible constant copying, fine-tuning collapse on compressed features, non-monotonic shot scaling — invisible to accuracy metrics alone.</p>
+          <div style="display: flex; flex-wrap: wrap; gap: 16px; font-size: 14.5px; margin-top: 2px;">
             <a href="#">OpenReview</a>
           </div>
         </li>
@@ -460,8 +460,8 @@
           <a href="https://arxiv.org/abs/2608.13482" style="font-family: Spectral, Georgia, serif; font-size: 20px; line-height: 1.35;">Synthetic Persona Pretraining: Alignment from Token Zero</a>
           <p style="margin: 0; font-size: 15.5px; color: #3f4c59;">Julian Minder, Viktor Moskvoretskii, Raghav Singhal, Difan Jiao, Andy Arditi, Shaobo Cui, <strong style="color: #1c2530;">Yiderigun Borjigin</strong>, Kartik Bali, Stefan Krsteski, Harsh Raj, Huu Nguyen, Jannik Brinkmann, Ashton Anderson, Roland Aydin, Robert West</p>
           <p style="margin: 0; font-size: 15px; color: #6b7a88;"><em>Preprint, arXiv:2608.13482 [cs.LG]</em> · 2026</p>
-          <p style="margin: 4px 0 0; max-width: 68ch; color: #3f4c59; font-size: 15.5px; text-wrap: pretty;">A fifteen-author multi-institution collaboration (EPFL, Toronto, Saarland/Hereon, and others) on pretraining-time alignment interventions.</p>
-          <div style="display: flex; gap: 16px; font-size: 14.5px; margin-top: 2px;">
+          <p style="margin: 4px 0 0; color: #3f4c59; font-size: 15.5px; text-wrap: pretty;">A fifteen-author multi-institution collaboration (EPFL, Toronto, Saarland/Hereon, and others) on pretraining-time alignment interventions.</p>
+          <div style="display: flex; flex-wrap: wrap; gap: 16px; font-size: 14.5px; margin-top: 2px;">
             <a href="https://arxiv.org/abs/2608.13482">arXiv</a>
             <a href="#">LessWrong</a>
           </div>
@@ -478,15 +478,15 @@
       <div style="display: grid; gap: 1px; background: #dce5ed; margin-bottom: 34px;">
         <article style="background: #ffffff; padding: 26px 28px; display: grid; gap: 8px;">
           <h3 style="font-family: Spectral, Georgia, serif; font-weight: 500; font-size: 21px; margin: 0;">Behavioral evaluation of LLMs</h3>
-          <p style="margin: 0; max-width: 64ch; color: #3f4c59; text-wrap: pretty;">Controlled benchmarks that hold the evidence fixed and vary one causal factor at a time, run across open-weight and frontier models, to measure when context rather than evidence decides the answer.</p>
+          <p style="margin: 0; color: #3f4c59; text-wrap: pretty;">Controlled benchmarks that hold the evidence fixed and vary one causal factor at a time, run across open-weight and frontier models, to measure when context rather than evidence decides the answer.</p>
         </article>
         <article style="background: #ffffff; padding: 26px 28px; display: grid; gap: 8px;">
           <h3 style="font-family: Spectral, Georgia, serif; font-weight: 500; font-size: 21px; margin: 0;">Chain-of-thought faithfulness and interpretability</h3>
-          <p style="margin: 0; max-width: 64ch; color: #3f4c59; text-wrap: pretty;">Residual-stream activation patching, donor-state and layer-sweep interventions, and logit-lens attribution to locate where a reasoning trace becomes causally load-bearing.</p>
+          <p style="margin: 0; color: #3f4c59; text-wrap: pretty;">Residual-stream activation patching, donor-state and layer-sweep interventions, and logit-lens attribution to locate where a reasoning trace becomes causally load-bearing.</p>
         </article>
         <article style="background: #ffffff; padding: 26px 28px; display: grid; gap: 8px;">
           <h3 style="font-family: Spectral, Georgia, serif; font-weight: 500; font-size: 21px; margin: 0;">AI for science: text interfaces for PDE modeling</h3>
-          <p style="margin: 0; max-width: 64ch; color: #3f4c59; text-wrap: pretty;">Reliability metrics for the interface between numerical data and language models, including inverse parameter estimation under zero-shot, in-context, and LoRA/QLoRA regimes.</p>
+          <p style="margin: 0; color: #3f4c59; text-wrap: pretty;">Reliability metrics for the interface between numerical data and language models, including inverse parameter estimation under zero-shot, in-context, and LoRA/QLoRA regimes.</p>
         </article>
       </div>
 
@@ -496,8 +496,8 @@
           <h4 style="font-family: Spectral, Georgia, serif; font-weight: 500; font-size: 20px; margin: 0; letter-spacing: 0.02em;">AnchorBench — evaluation harness and public dataset</h4>
           <span style="font-size: 15px; color: #6b7a88;">2026</span>
         </div>
-        <p style="margin: 0; max-width: 68ch; color: #3f4c59; font-size: 15.5px; text-wrap: pretty;">14,400 released prompts with gold answers and anchor values; seed-controlled deterministic generation, one shared parser across all conditions (median parse rate 99.9%), and SHA-256 checksums linking every published number to the raw generations behind it.</p>
-        <div style="display: flex; gap: 16px; font-size: 14.5px;">
+        <p style="margin: 0; color: #3f4c59; font-size: 15.5px; text-wrap: pretty;">14,400 released prompts with gold answers and anchor values; seed-controlled deterministic generation, one shared parser across all conditions (median parse rate 99.9%), and SHA-256 checksums linking every published number to the raw generations behind it.</p>
+        <div style="display: flex; flex-wrap: wrap; gap: 16px; font-size: 14.5px;">
           <a href="https://github.com/Ydrg9989/AnchorBench">github.com/Ydrg9989/AnchorBench</a>
           <a href="https://huggingface.co/datasets/Yiderigun/AnchorBench">huggingface.co/datasets/Yiderigun/AnchorBench</a>
         </div>
@@ -518,7 +518,7 @@
           <div>
             <p style="margin: 0; font-size: 18px; font-family: Spectral, Georgia, serif;">Doctoral Researcher, AI Safety and Scientific ML</p>
             <p style="margin: 4px 0 10px; color: #3f4c59;">Saarland University · supervised by Prof. Dr. Roland Aydin</p>
-            <p style="margin: 0; color: #3f4c59; font-size: 15.5px; max-width: 62ch; text-wrap: pretty;">Lead author on LLM safety research spanning behavioral evaluation, chain-of-thought faithfulness, and mechanistic analysis of how context steers model answers.</p>
+            <p style="margin: 0; color: #3f4c59; font-size: 15.5px; text-wrap: pretty;">Lead author on LLM safety research spanning behavioral evaluation, chain-of-thought faithfulness, and mechanistic analysis of how context steers model answers.</p>
           </div>
         </div>
         <div style="display: grid; grid-template-columns: 168px 1fr; gap: 24px;">
@@ -526,7 +526,7 @@
           <div>
             <p style="margin: 0; font-size: 18px; font-family: Spectral, Georgia, serif;">Research Associate</p>
             <p style="margin: 4px 0 10px; color: #3f4c59;">Helmholtz-Zentrum Hereon, Institute of Material Systems Modeling, Geesthacht</p>
-            <p style="margin: 0; color: #3f4c59; font-size: 15.5px; max-width: 62ch; text-wrap: pretty;">Built AnchorBench, and ran a mechanistic study of chain-of-thought faithfulness using activation patching and logit-lens attribution.</p>
+            <p style="margin: 0; color: #3f4c59; font-size: 15.5px; text-wrap: pretty;">Built AnchorBench, and ran a mechanistic study of chain-of-thought faithfulness using activation patching and logit-lens attribution.</p>
           </div>
         </div>
         <div style="display: grid; grid-template-columns: 168px 1fr; gap: 24px;">
@@ -534,7 +534,7 @@
           <div>
             <p style="margin: 0; font-size: 18px; font-family: Spectral, Georgia, serif;">Master Thesis Researcher</p>
             <p style="margin: 4px 0 10px; color: #3f4c59;">BMW Group, Research and Innovation Center (FIZ), Munich</p>
-            <p style="margin: 0; color: #3f4c59; font-size: 15.5px; max-width: 62ch; text-wrap: pretty;">Deep learning models for multivariate time-series prediction of vehicle thermal behavior, with transfer learning and domain adaptation.</p>
+            <p style="margin: 0; color: #3f4c59; font-size: 15.5px; text-wrap: pretty;">Deep learning models for multivariate time-series prediction of vehicle thermal behavior, with transfer learning and domain adaptation.</p>
           </div>
         </div>
         <div style="display: grid; grid-template-columns: 168px 1fr; gap: 24px;">
@@ -572,7 +572,7 @@
       </div>
 
       <h3 style="font-family: 'IBM Plex Sans', sans-serif; font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase; color: #7b8a98; margin: 0 0 20px; font-weight: 500;">Research methods and infrastructure</h3>
-      <div style="display: grid; gap: 22px; max-width: 74ch;">
+      <div style="display: grid; gap: 22px;;">
         <div style="display: grid; gap: 4px;">
           <p style="margin: 0; font-family: Spectral, Georgia, serif; font-size: 17px;">Evaluation infrastructure</p>
           <p style="margin: 0; color: #3f4c59; font-size: 15.5px; text-wrap: pretty;">Benchmark and harness design in Python, built end to end; vLLM on multi-GPU H100 nodes, HuggingFace Transformers, OpenRouter and provider APIs (OpenAI, Anthropic, Google, xAI); batched greedy and sampled decoding, deterministic answer extraction, parse-free logit readouts, seed-controlled data generation, checksummed result releases.</p>
@@ -599,7 +599,7 @@
   </main>
 
   <footer style="border-top: 1px solid #dce5ed; background: #eef3f7;">
-    <div style="max-width: 940px; margin: 0 auto; padding: 34px 40px 44px; box-sizing: border-box; display: flex; flex-wrap: wrap; gap: 20px; justify-content: space-between; align-items: baseline;">
+    <div style="max-width: 700px; margin: 0 auto; padding: 34px 40px 44px; box-sizing: border-box; display: flex; flex-wrap: wrap; gap: 20px; justify-content: space-between; align-items: baseline;">
       <p style="margin: 0; color: #6b7a88; font-size: 15px;">Yiderigun Borjigin · Saarland University</p>
       <div style="display: flex; flex-wrap: wrap; gap: 22px; font-size: 15px; white-space: nowrap;">
         <a href="mailto:yiderigun.borjigin@uni-saarland.de">Email</a>
