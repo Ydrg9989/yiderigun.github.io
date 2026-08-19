@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Research and artifacts — Yiderigun Borjigin</title>
+<meta name="description" content="Research areas and open-source artifacts by Yiderigun Borjigin: behavioral evaluation of LLMs, chain-of-thought faithfulness, mechanistic interpretability, and the AnchorBench harness and dataset." />
+<meta name="author" content="Yiderigun Borjigin" />
+<link rel="canonical" href="https://yiderigun.com/research/" />
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+<meta property="og:type" content="profile" />
+<meta property="og:title" content="Research and artifacts — Yiderigun Borjigin" />
+<meta property="og:description" content="Research areas and open-source artifacts by Yiderigun Borjigin: behavioral evaluation of LLMs, chain-of-thought faithfulness, mechanistic interpretability, and the AnchorBench harness and dataset." />
+<meta property="og:url" content="https://yiderigun.com/research/" />
+<meta property="og:image" content="https://yiderigun.com/assets/sea.jpg" />
+<meta name="twitter:card" content="summary_large_image" />
+<link rel="icon" href="/mongol.svg" type="image/svg+xml" />
+<link rel="stylesheet" href="/assets/site.css" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "url": "https://yiderigun.com/research/",
+  "name": "Research and artifacts — Yiderigun Borjigin",
+  "about": { "@id": "https://yiderigun.com/#person" },
+  "mainEntity": {
+    "@type": "Dataset",
+    "name": "AnchorBench",
+    "description": "14,400 released prompts with gold answers and anchor values; seed-controlled deterministic generation, one shared parser across all conditions, and SHA-256 checksums linking every published number to the raw generations behind it.",
+    "creator": { "@id": "https://yiderigun.com/#person" },
+    "url": "https://huggingface.co/datasets/Yiderigun/AnchorBench",
+    "codeRepository": "https://github.com/Ydrg9989/AnchorBench"
+  }
+}
+</script>
+</head>
+<body>
+<div class="page">
+
+  <header id="masthead" class="masthead compact">
+    <picture><source srcset="/assets/sea.webp" type="image/webp" /><img class="sea" src="/assets/sea.jpg" alt="Open sea under a clear sky, a motorboat leaving a long wake near the horizon" fetchpriority="high" /></picture>
+    <div class="scrim"></div>
+    <div class="inner">
+      <nav>
+        <a href="/">About</a>
+        <a href="/publications/">Publications</a>
+        <a href="/research/" aria-current="page">Research</a>
+        <a href="/cv/">CV</a>
+      </nav>
+      <div id="heroTitle">
+        <h1>Yiderigun Borjigin</h1>
+        <p id="heroTagline">Doctoral researcher in AI safety · Saarland University</p>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="research" style="padding-top: 76px;">
+      <div style="display: flex; align-items: center; gap: 16px; margin: 0 0 30px;">
+        <h2 style="font-family: Spectral, Georgia, serif; font-weight: 500; font-size: 30px; margin: 0; color: #14456f; white-space: nowrap;">Research and artifacts</h2>
+        <span style="flex: 1; height: 1px; background: linear-gradient(90deg, #b9ccdd, rgba(185,204,221,0));"></span>
+      </div>
+
+      <div style="display: grid; gap: 1px; background: #dce5ed; margin-bottom: 34px;">
+        <article style="background: #ffffff; padding: 26px 28px; display: grid; gap: 8px;">
+          <h3 style="font-family: Spectral, Georgia, serif; font-weight: 500; font-size: 21px; margin: 0;">Behavioral evaluation of LLMs</h3>
+          <p style="margin: 0; color: #3f4c59; text-wrap: pretty;">Controlled benchmarks that hold the evidence fixed and vary one causal factor at a time, run across open-weight and frontier models, to measure when context rather than evidence decides the answer.</p>
+        </article>
+        <article style="background: #ffffff; padding: 26px 28px; display: grid; gap: 8px;">
+          <h3 style="font-family: Spectral, Georgia, serif; font-weight: 500; font-size: 21px; margin: 0;">Chain-of-thought faithfulness and interpretability</h3>
+          <p style="margin: 0; color: #3f4c59; text-wrap: pretty;">Residual-stream activation patching, donor-state and layer-sweep interventions, and logit-lens attribution to locate where a reasoning trace becomes causally load-bearing.</p>
+        </article>
+        <article style="background: #ffffff; padding: 26px 28px; display: grid; gap: 8px;">
+          <h3 style="font-family: Spectral, Georgia, serif; font-weight: 500; font-size: 21px; margin: 0;">AI for science: text interfaces for PDE modeling</h3>
+          <p style="margin: 0; color: #3f4c59; text-wrap: pretty;">Reliability metrics for the interface between numerical data and language models, including inverse parameter estimation under zero-shot, in-context, and LoRA/QLoRA regimes.</p>
+        </article>
+      </div>
+
+      <h3 style="font-family: 'IBM Plex Sans', sans-serif; font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase; color: #7b8a98; margin: 0 0 18px; font-weight: 500;">Open-source artifacts</h3>
+      <div style="background: #ffffff; border: 1px solid #dce5ed; padding: 26px 28px; display: grid; gap: 10px;">
+        <div style="display: flex; flex-wrap: wrap; gap: 12px; align-items: baseline; justify-content: space-between;">
+          <h4 style="font-family: Spectral, Georgia, serif; font-weight: 500; font-size: 20px; margin: 0; letter-spacing: 0.02em;">AnchorBench — evaluation harness and public dataset</h4>
+          <span style="font-size: 15px; color: #6b7a88;">2026</span>
+        </div>
+        <p style="margin: 0; color: #3f4c59; font-size: 15.5px; text-wrap: pretty;">14,400 released prompts with gold answers and anchor values; seed-controlled deterministic generation, one shared parser across all conditions (median parse rate 99.9%), and SHA-256 checksums linking every published number to the raw generations behind it.</p>
+        <div style="display: flex; flex-wrap: wrap; gap: 16px; font-size: 14.5px;">
+          <a href="https://github.com/Ydrg9989/AnchorBench">github.com/Ydrg9989/AnchorBench</a>
+          <a href="https://huggingface.co/datasets/Yiderigun/AnchorBench">huggingface.co/datasets/Yiderigun/AnchorBench</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer style="border-top: 1px solid #dce5ed; background: #eef3f7;">
+    <div style="max-width: 700px; margin: 0 auto; padding: 34px 40px 44px; box-sizing: border-box; display: flex; flex-wrap: wrap; gap: 20px; justify-content: space-between; align-items: baseline;">
+      <p style="margin: 0; color: #6b7a88; font-size: 15px;"><a href="/" style="color: inherit; text-decoration: none;">Yiderigun Borjigin</a> · Saarland University</p>
+      <div style="display: flex; flex-wrap: wrap; gap: 22px; font-size: 15px; white-space: nowrap;">
+        <a href="mailto:yiderigun.borjigin@uni-saarland.de">Email</a>
+        <a href="https://github.com/Ydrg9989">GitHub</a>
+        <a href="https://www.linkedin.com/in/yiderigun/">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+
+</div>
+</body></html>
