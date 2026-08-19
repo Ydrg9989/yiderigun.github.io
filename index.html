@@ -387,12 +387,48 @@
   @keyframes seaDrift { from { transform: scale(1.06) translate3d(-1.2%, 0, 0); } to { transform: scale(1.12) translate3d(1.2%, -1%, 0); } }
   @keyframes rise { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
   html { scroll-behavior: smooth; }
+
+  /* --- Section tabs -----------------------------------------------------
+     One section is visible at a time, chosen by the URL hash, so the nav
+     behaves like four pages. The hash is mirrored onto <html data-tab>
+     by the script at the end of the file; :target alone is unreliable
+     here because the DC runtime renders the sections after navigation. */
+  main > section { display: none; scroll-margin-top: 168px; }
+  html:not([data-tab]) #about,
+  html[data-tab="about"] #about,
+  html[data-tab="publications"] #publications,
+  html[data-tab="research"] #research,
+  html[data-tab="cv"] #cv { display: block; animation: rise 0.5s ease both; }
+  #about { scroll-margin-top: 440px; }
+
+  /* Compact masthead on every section except About */
+  #masthead { transition: height 0.35s ease; }
+  html[data-tab="publications"] #masthead,
+  html[data-tab="research"] #masthead,
+  html[data-tab="cv"] #masthead { height: 168px !important; }
+  html[data-tab="publications"] #heroTitle,
+  html[data-tab="research"] #heroTitle,
+  html[data-tab="cv"] #heroTitle { padding-bottom: 22px !important; }
+  html[data-tab="publications"] #heroTitle h1,
+  html[data-tab="research"] #heroTitle h1,
+  html[data-tab="cv"] #heroTitle h1 { font-size: 28px !important; }
+  html[data-tab="publications"] #heroTagline,
+  html[data-tab="research"] #heroTagline,
+  html[data-tab="cv"] #heroTagline { display: none !important; }
+
+  /* Active nav item */
+  #masthead nav a { padding-bottom: 4px; border-bottom: 2px solid transparent; transition: color 0.2s ease, border-color 0.2s ease; }
+  html:not([data-tab]) #masthead nav a[href="#about"],
+  html[data-tab="about"] #masthead nav a[href="#about"],
+  html[data-tab="publications"] #masthead nav a[href="#publications"],
+  html[data-tab="research"] #masthead nav a[href="#research"],
+  html[data-tab="cv"] #masthead nav a[href="#cv"] { color: #ffffff !important; border-bottom-color: rgba(255,255,255,0.9); }
 </style>
 </helmet>
 
 <div style="font-family: 'IBM Plex Sans', system-ui, sans-serif; font-size: 17px; line-height: 1.65;">
 
-  <header style="position: relative; height: 440px; overflow: hidden; background: #0f3f6e;">
+  <header id="masthead" style="position: relative; height: 440px; overflow: hidden; background: #0f3f6e;">
     <picture><source srcset="assets/sea.webp" type="image/webp" /><img src="assets/sea.jpg" alt="Open sea under a clear sky, a motorboat leaving a long wake near the horizon" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 42%; animation: seaDrift 70s ease-in-out infinite alternate;" fetchpriority="high" /></picture>
     <div style="position: absolute; inset: 0; background: linear-gradient(rgba(10,40,70,0.28) 0%, rgba(10,40,70,0.06) 34%, rgba(8,32,58,0.42) 100%);"></div>
 
@@ -403,9 +439,9 @@
         <a href="#research" style="color: #eef4f8; text-decoration: none;" style-hover="color:#ffffff">Research</a>
         <a href="#cv" style="color: #eef4f8; text-decoration: none;" style-hover="color:#ffffff">CV</a>
       </nav>
-      <div style="padding-bottom: 48px;">
+      <div id="heroTitle" style="padding-bottom: 48px;">
         <h1 style="font-family: Spectral, Georgia, serif; font-weight: 500; font-size: 54px; line-height: 1.05; margin: 0; color: #ffffff; text-shadow: 0 2px 22px rgba(6,26,48,0.55);">Yiderigun Borjigin</h1>
-        <p style="margin: 14px 0 0; font-size: 17px; color: #e3edf5; letter-spacing: 0.02em; text-shadow: 0 1px 12px rgba(6,26,48,0.5);">Doctoral researcher in AI safety · Saarland University</p>
+        <p id="heroTagline" style="margin: 14px 0 0; font-size: 17px; color: #e3edf5; letter-spacing: 0.02em; text-shadow: 0 1px 12px rgba(6,26,48,0.5);">Doctoral researcher in AI · Saarland University</p>
       </div>
     </div>
   </header>
@@ -613,5 +649,22 @@
 
 </x-dc>
 
+
+<script>
+// Mirror the URL hash onto <html data-tab> so the stylesheet can show one
+// section at a time. Runs on load and on every hash change (nav clicks,
+// deep links, browser back/forward).
+(function () {
+  var TABS = ["about", "publications", "research", "cv"];
+  function apply() {
+    var id = (location.hash || "").slice(1);
+    if (TABS.indexOf(id) === -1) id = "about";
+    document.documentElement.setAttribute("data-tab", id);
+    window.scrollTo(0, 0);
+  }
+  window.addEventListener("hashchange", apply);
+  apply();
+})();
+</script>
 
 </body></html>
